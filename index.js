@@ -30,11 +30,18 @@ console.log('example task:', processFirstItem(['foo','bar'],function(str){return
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+    In counter1 the variable count is block scoped whereas in counter2 count is
+    globally scoped.
+
   2. Which of the two uses a closure? How can you tell?
-  
+    counter1 uses a closure as it is a function that returns a function, that is, a
+    callback.
+
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+     counter1 would be preferable when trying to reduce side effects and for creating 
+     private variables, whereas counter2 would be preferable when a shared start needs
+     to be modified and accessed by multiple functions and in small-scale applications
 */
 
 // counter1 code
